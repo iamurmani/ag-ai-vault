@@ -1,0 +1,23 @@
+<div class="login-container">
+    <div class="login-g">
+        <img src="../../../../assets/login_admin.svg" alt="login">
+        <button class="signin-btn"><img src="../../../../../assets/google.png" alt="google icon"> Sign in with Google</button>
+        <p>OR</p>
+        <form #form="ngForm">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="text" name="email" ngModel matInput required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="password" name="password" ngModel matInput required>
+            </mat-form-field>
+            <button type="submit">Sign In</button>
+            <span>
+                <p>Don't have account?</p>
+                <a href="#">Sign up</a>
+            </span>
+        </form>
+    </div>
+    
+</div>
