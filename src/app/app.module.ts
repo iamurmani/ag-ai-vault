@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminModule } from './admin/admin.module';
-import { UserModule } from './user/user.module';
+import { AdminModule } from './modules/admin/admin.module';
+import { UserModule } from './modules/user/user.module';
 
 @NgModule({
   declarations: [
