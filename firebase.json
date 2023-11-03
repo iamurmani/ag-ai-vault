@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "ag-ai-vault",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
