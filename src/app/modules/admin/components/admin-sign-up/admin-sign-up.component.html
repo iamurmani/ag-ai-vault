@@ -1,0 +1,39 @@
+<div class="signup-container">
+    <div *ngIf="!showForm" class="signup">
+        <img src="../../../../../assets/signup_admin.svg" alt="signup">
+        <button class="signup-btn">
+            <img src="../../../../../assets/google.png" alt="google icon"> Sign up with Google
+        </button>
+        <p>OR</p>
+        <button class="email-btn" (click)="updateShowForm()">Continue with email</button>
+        <span>
+            <p>Already have an account?</p>
+            <a href="/admin/signin">Sign In</a>
+        </span>
+    </div>
+    <div *ngIf="showForm" class="signup-form">
+        <div class="img-icon">
+            <mat-icon class="back-icon" aria-hidden="false" aria-label="back" fontIcon="arrow_back_ios" (click)="updateShowForm()"></mat-icon>
+            <img src="../../../../../assets/register_admin.svg" alt="">
+        </div>
+        <form #form="ngForm">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input type="text" name="name" ngModel matInput required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="email" name="email" ngModel matInput required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input type="tex" name="newpwd" ngModel matInput required>
+            </mat-form-field>
+            <button>Create Account</button>
+        </form>
+        <span>
+            <p>Already have an account?</p>
+            <a href="/admin/signin">Sign In</a>
+        </span>
+    </div>
+</div>
