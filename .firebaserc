@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ag-ai-vault": {
+      "hosting": {
+        "ag-ai-vault": [
+          "ag-ai-vault"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ag-ai-vault"
+  }
+}

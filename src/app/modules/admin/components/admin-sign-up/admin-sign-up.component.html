@@ -16,7 +16,7 @@
             <mat-icon class="back-icon" aria-hidden="false" aria-label="back" fontIcon="arrow_back_ios" (click)="updateShowForm()"></mat-icon>
             <img src="../../../../../assets/register_admin.svg" alt="">
         </div>
-        <form #form="ngForm">
+        <form #form="ngForm" (ngSubmit)="signUpWithEmail(form)">
             <mat-form-field>
                 <mat-label>Name</mat-label>
                 <input type="text" name="name" ngModel matInput required>
@@ -27,9 +27,9 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Password</mat-label>
-                <input type="tex" name="newpwd" ngModel matInput required>
+                <input type="password" name="password" ngModel matInput required>
             </mat-form-field>
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
         </form>
         <span>
             <p>Already have an account?</p>
