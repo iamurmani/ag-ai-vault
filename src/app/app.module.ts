@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AdminModule } from './modules/admin/admin.module';
 import { UserModule } from './modules/user/user.module';
 import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { connectAuthEmulator, getAuth, provideAuth } from '@angular/fire/auth';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { connectAuthEmulator, getAuth, provideAuth } from '@angular/fire/auth';
     AdminModule,
     UserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth())

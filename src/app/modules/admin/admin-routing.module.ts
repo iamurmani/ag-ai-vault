@@ -4,7 +4,9 @@ import { AdminSignInComponent } from "./components/admin-sign-in/admin-sign-in.c
 import { AdminSignUpComponent } from "./components/admin-sign-up/admin-sign-up.component";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import {  canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
-import { ToolsTableComponent } from "./components/dashboard/tools-table/tools-table.component";
+import { ToolsDataComponent } from "./components/dashboard/tools-data/tools-data.component";
+import { AdminOverviewComponent } from "./components/dashboard/admin-overview/admin-overview.component";
+import { UsersDataComponent } from "./components/dashboard/users-data/users-data.component";
 
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['admin/signin']);
@@ -14,6 +16,11 @@ const routes: Routes = [
     {path:'signin', component:AdminSignInComponent, ...canActivate(redirectLoggedInToItems)},
     {path:'signup',component:AdminSignUpComponent},
     {path:'dashboard', component:DashboardComponent,  ...canActivate(redirectUnauthorizedToLogin),
+    children:[
+      {path:'', component:AdminOverviewComponent},
+      {path:'tools', component:ToolsDataComponent},
+      {path:'users', component:UsersDataComponent}
+    ]
 }
 ];
 @NgModule({

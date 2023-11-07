@@ -7,18 +7,36 @@ import { SharedModule } from "../shared/shared.module";
 import { AdminSignUpComponent } from "./components/admin-sign-up/admin-sign-up.component";
 import { AdminAuthService } from "./services/admin-auth.service";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
-import { ToolsTableComponent } from "./components/dashboard/tools-table/tools-table.component";
+import { ToolsDataComponent } from "./components/dashboard/tools-data/tools-data.component";
+import { AdminHeaderComponent } from "./components/dashboard/admin-header/admin-header.component";
+import { AdminSideBarComponent } from "./components/dashboard/admin-sidebar/admin-sidebar.component";
+import { AdminOverviewComponent } from "./components/dashboard/admin-overview/admin-overview.component";
+import { AgGridTable } from "./components/dashboard/ag-grid-table/ag-grid-table.component";
+import { ThemeService } from "./services/theme.service";
+import { UsersDataComponent } from "./components/dashboard/users-data/users-data.component";
 
 @NgModule({
     declarations:[
         AdminSignInComponent,
         AdminSignUpComponent,
         DashboardComponent,
+        AdminHeaderComponent,
+        AdminSideBarComponent,
+        AdminOverviewComponent,
+        ToolsDataComponent,
+        AgGridTable,
+        UsersDataComponent
     ],
     exports:[
         AdminSignInComponent,
         AdminSignUpComponent,
         DashboardComponent,
+        AdminHeaderComponent,
+        AdminSideBarComponent,
+        AdminOverviewComponent,
+        ToolsDataComponent,
+        AgGridTable,
+        UsersDataComponent
     ],
     imports:[
         CommonModule,
@@ -26,7 +44,7 @@ import { ToolsTableComponent } from "./components/dashboard/tools-table/tools-ta
         MaterialModule,
         SharedModule
     ],
-    providers:[AdminAuthService]
+    providers:[AdminAuthService, ThemeService]
 })
 export class AdminModule {
 
