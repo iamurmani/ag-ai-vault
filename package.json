@@ -10,6 +10,10 @@
   },
   "private": true,
   "dependencies": {
+    "@ag-grid-community/angular": "^29.3.5",
+    "@ag-grid-community/client-side-row-model": "^29.3.5",
+    "@ag-grid-community/core": "^29.3.5",
+    "@ag-grid-community/styles": "^29.3.5",
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.10",
     "@angular/common": "^16.2.0",

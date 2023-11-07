@@ -4,13 +4,18 @@ import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
+import { AgGridModule } from "@ag-grid-community/angular";
+import { ModuleRegistry } from '@ag-grid-community/core';
+import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 
+ModuleRegistry.registerModules([ClientSideRowModelModule]);
 const MaterialComponent = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    AgGridModule,
 ]
 @NgModule({
     declarations: [],
