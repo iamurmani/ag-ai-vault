@@ -1,14 +1,12 @@
-import { ColDef } from "@ag-grid-community/core";
+import { ColDef } from "@ag-grid-community/core/dist/cjs/es5/entities/colDef";
 import { Component } from "@angular/core";
-import { MatDialog } from "@angular/material/dialog";
-import { ToolComponent } from "../dialogs/tool/tool.component";
 
 @Component({
-    selector:'tools-data',
-    templateUrl:'tools-data.component.html',
-    styleUrls:['tools-data.component.scss']
+    selector:'category-data',
+    templateUrl:'category-data.component.html',
+    styleUrls:['category-data.component.scss']
 })
-export class ToolsDataComponent {
+export class CategoryDataComponent{
     rowDataa = [
         {
             id:1,
@@ -89,17 +87,4 @@ export class ToolsDataComponent {
         {field:"company", headerName:"Company", width:150,sortable:true,filter:'agTextColumnFilter',floatingFilter: true,resizable: true,},
         {field:"category", headerName:"Category", width:150,sortable:true,filter:'agTextColumnFilter',floatingFilter: true,resizable: true,},
 	];
-
-    constructor(public dialog: MatDialog){
-
-    }
-    
-    createTool(){
-        this.dialog.open(ToolComponent,{
-            width:'98vw',
-            minHeight: '98vh',
-            maxWidth:'100vw',
-            disableClose:true
-        });
-    }
 }

@@ -14,6 +14,8 @@ import { AdminOverviewComponent } from "./components/dashboard/admin-overview/ad
 import { AgGridTable } from "./components/dashboard/ag-grid-table/ag-grid-table.component";
 import { ThemeService } from "./services/theme.service";
 import { UsersDataComponent } from "./components/dashboard/users-data/users-data.component";
+import { CategoryDataComponent } from "./components/dashboard/category-data/category-data.component";
+import { ToolComponent } from "./components/dashboard/dialogs/tool/tool.component";
 
 @NgModule({
     declarations:[
@@ -25,7 +27,9 @@ import { UsersDataComponent } from "./components/dashboard/users-data/users-data
         AdminOverviewComponent,
         ToolsDataComponent,
         AgGridTable,
-        UsersDataComponent
+        UsersDataComponent,
+        CategoryDataComponent,
+        ToolComponent
     ],
     exports:[
         AdminSignInComponent,
@@ -36,7 +40,9 @@ import { UsersDataComponent } from "./components/dashboard/users-data/users-data
         AdminOverviewComponent,
         ToolsDataComponent,
         AgGridTable,
-        UsersDataComponent
+        UsersDataComponent,
+        CategoryDataComponent,
+        ToolComponent
     ],
     imports:[
         CommonModule,
