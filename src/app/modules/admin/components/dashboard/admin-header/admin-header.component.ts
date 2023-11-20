@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { ThemeService } from "../../../services/theme.service";
 
 @Component({
@@ -7,7 +7,9 @@ import { ThemeService } from "../../../services/theme.service";
     styleUrls:['admin-header.component.scss']
 })
 export class AdminHeaderComponent {
+    @Output() sideNav:EventEmitter<any>= new EventEmitter();
     theme:string = 'light';
+    sideNavOpened:boolean = false;
 
     constructor(private themeService:ThemeService){}
 
@@ -21,5 +23,9 @@ export class AdminHeaderComponent {
             document.body.classList.remove('theme-alternate');
             this.themeService.theme.next('light');
         }
+    }
+    openSideNav(){
+        this.sideNavOpened = !this.sideNavOpened;
+        this.sideNav.emit(this.sideNavOpened);
     }
 }

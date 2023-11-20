@@ -4,15 +4,19 @@
     </div>
     <div class="menus">
         <div class="top-menus">
-            <div class="menu-item">
+            <div class="menu-item" (click)="load('dashboard')">
                 <mat-icon aria-hidden="false" fontIcon="dashboard"></mat-icon>
                 <p>Dashboard</p>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" (click)="load('tools')">
                 <mat-icon aria-hidden="false" fontIcon="build_circle"></mat-icon>
                 <p>Tools</p>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" (click)="load('categories')">
+                <mat-icon aria-hidden="false" fontIcon="category"></mat-icon>
+                <p>Categories</p>
+            </div>
+            <div class="menu-item" (click)="load('users')">
                 <mat-icon aria-hidden="false" fontIcon="groups"></mat-icon>
                 <p>Users</p>
             </div>

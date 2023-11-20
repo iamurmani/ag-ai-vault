@@ -3,11 +3,11 @@
 
 <div>
     <mat-sidenav-container class="main-container">
-        <mat-sidenav mode="side" opened class="sidebar-container">
+        <mat-sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? (sideNavOpened ? true : false) : true"  class="sidebar-container">
             <admin-sidebar></admin-sidebar>
         </mat-sidenav>
         <mat-sidenav-content class="content-container">
-            <admin-header ></admin-header>
+            <admin-header (sideNav)="toggleSideNav($event)"></admin-header>
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>

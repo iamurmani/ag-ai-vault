@@ -1,10 +1,22 @@
 .admin-header {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 18px 10px 0;
+    padding: 10px 18px 10px 18px;
 
     .header-items {
         display: flex;
         gap: 1rem;
+    }
+    .header-ham {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) { 
+    .admin-header {
+        justify-content: space-between;
+        .header-ham {
+            display: block;
+        }
     }
 }

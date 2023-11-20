@@ -1,6 +1,6 @@
 .grid-table {
     width: 95%;
-    height: 89%;
+    height: 84%;
     padding: 1rem;
 }
 
@@ -25,3 +25,11 @@
     --ag-input-disabled-border-color: rgba(104, 104, 110, 0.3);
     --ag-input-disabled-background-color: rgba(104, 104, 110, 0.07);
   }
+
+@media screen and (max-width:600px) {
+    .grid-table{
+      width: auto;
+      margin: 10px;
+      padding: 0;
+    }
+}
