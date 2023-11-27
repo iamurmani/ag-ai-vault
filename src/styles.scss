@@ -47,3 +47,23 @@ a,a:active,a:visited,a:hover {
 .button-div {
     margin-left: 1rem;
 }
+.dialog-tile {
+    margin: 1rem 1rem 0.5rem 1rem;
+    font-size: larger;
+    h5 {
+        margin: 0;
+    }
+}
+.full-width {
+    width: 100%;
+}
+.form-field {
+    width: 100%;
+}
+
+.mdc-dialog__title::before {
+    height: 0px !important; 
+}
+.dialog-content {
+    max-height: 100% !important
+}

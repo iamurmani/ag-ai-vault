@@ -1,8 +1,32 @@
-<div mat-dialog-title>
-    <h1 >Hi</h1>
+<div class="dialog-tile">
+    <h5>Create tool</h5>
 </div>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+<div mat-dialog-content class="dialog-content">
+    <form action="">
+      <mat-form-field class="form-field">
+        <mat-label>Tool Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Company Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>URL</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Status</mat-label>
+        <select matNativeControl required>
+          <option value="active">Active</option>
+          <option value="isabled">Disabled</option>
+        </select>
+      </mat-form-field>
+    </form>
 </div>
 <div mat-dialog-actions>
   <button mat-button >No Thanks</button>
