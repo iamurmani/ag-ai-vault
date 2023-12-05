@@ -4,6 +4,8 @@ import { MatInputModule } from "@angular/material/input";
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
 import { AgGridModule } from "@ag-grid-community/angular";
 import { ModuleRegistry } from '@ag-grid-community/core';
@@ -17,7 +19,9 @@ const MaterialComponent = [
     MatIconModule,
     MatSidenavModule,
     AgGridModule,
-    MatDialogModule
+    MatDialogModule,
+    MatChipsModule,
+    MatAutocompleteModule
 ]
 @NgModule({
     declarations: [],

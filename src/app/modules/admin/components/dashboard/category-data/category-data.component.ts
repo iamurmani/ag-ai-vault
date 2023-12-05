@@ -1,5 +1,7 @@
 import { ColDef } from "@ag-grid-community/core/dist/cjs/es5/entities/colDef";
 import { Component } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
+import { CategoryComponent } from "../dialogs/catergory/category.component";
 
 @Component({
     selector:'category-data',
@@ -87,4 +89,17 @@ export class CategoryDataComponent{
         {field:"company", headerName:"Company", width:150,sortable:true,filter:'agTextColumnFilter',floatingFilter: true,resizable: true,},
         {field:"category", headerName:"Category", width:150,sortable:true,filter:'agTextColumnFilter',floatingFilter: true,resizable: true,},
 	];
+
+    constructor(public dialog: MatDialog){
+
+    }
+
+    addCategory(){
+        this.dialog.open(CategoryComponent,{
+            width:'98vw',
+            minHeight: '98vh',
+            maxWidth:'100vw',
+            disableClose:true
+        })
+    }
 }

@@ -1,0 +1,49 @@
+<div class="dialog-tile">
+    <h5>Create tool</h5>
+    <mat-icon class="pointer" (click)="closeDialog()">close</mat-icon>
+</div>
+<div mat-dialog-content class="dialog-content">
+    <form action="">
+        <mat-form-field class="form-field">
+            <mat-label>First Name</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Phone Number</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Status</mat-label>
+            <select matNativeControl>
+                <option value="active">Active</option>
+                <option value="disabled">Disable</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Source</mat-label>
+            <select matNativeControl>
+                <option value="internal">Iternal</option>
+                <option value="signup">Signup</option>
+            </select>
+        </mat-form-field>
+        <mat-form-field class="form-field">
+            <mat-label>Role</mat-label>
+            <select matNativeControl>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions class="dialog-action">
+    <button mat-raised-button (click)="closeDialog()">Cancel</button>
+    <button mat-raised-button color="primary" >Save</button>
+  </div>
