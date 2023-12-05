@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UserComponent } from '../dialogs/user/user.component';
 
 @Component({
     selector: 'users-data',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class UsersDataComponent implements OnInit {
-    constructor() { }
+    constructor(public dialog:MatDialog) { }
 
     ngOnInit() { }
 
@@ -75,5 +77,15 @@ export class UsersDataComponent implements OnInit {
             status: 'Active',
 
         }
-    ]
+    ];
+
+    addUser(){
+        this.dialog.open(UserComponent, {
+            width:'98vw',
+            minHeight: '98vh',
+            maxWidth:'100vw',
+            disableClose:true
+        });
+    }
+
 }

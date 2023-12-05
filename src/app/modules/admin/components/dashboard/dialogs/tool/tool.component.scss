@@ -1,0 +1,9 @@
+.selected-image {
+    margin-top: 1rem;
+    img {
+        max-width: 100%;
+        width: 15%;
+    }
+    display: flex;
+    gap: 0.5rem;
+}

@@ -16,6 +16,8 @@ import { ThemeService } from "./services/theme.service";
 import { UsersDataComponent } from "./components/dashboard/users-data/users-data.component";
 import { CategoryDataComponent } from "./components/dashboard/category-data/category-data.component";
 import { ToolComponent } from "./components/dashboard/dialogs/tool/tool.component";
+import { CategoryComponent } from "./components/dashboard/dialogs/catergory/category.component";
+import { UserComponent } from "./components/dashboard/dialogs/user/user.component";
 
 @NgModule({
     declarations:[
@@ -29,7 +31,9 @@ import { ToolComponent } from "./components/dashboard/dialogs/tool/tool.componen
         AgGridTable,
         UsersDataComponent,
         CategoryDataComponent,
-        ToolComponent
+        ToolComponent,
+        CategoryComponent,
+        UserComponent
     ],
     exports:[
         AdminSignInComponent,
@@ -42,7 +46,9 @@ import { ToolComponent } from "./components/dashboard/dialogs/tool/tool.componen
         AgGridTable,
         UsersDataComponent,
         CategoryDataComponent,
-        ToolComponent
+        ToolComponent,
+        CategoryComponent,
+        UserComponent
     ],
     imports:[
         CommonModule,
