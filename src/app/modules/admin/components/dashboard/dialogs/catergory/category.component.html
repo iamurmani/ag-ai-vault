@@ -2,26 +2,35 @@
     <h5>Create tool</h5>
     <mat-icon class="pointer" (click)="closeDialog()">close</mat-icon>
 </div>
-<div mat-dialog-content class="dialog-content">
-    <form action="">
+<form [formGroup]="categoryForm" (ngSubmit)="saveCategroy()">
+    <div mat-dialog-content class="dialog-content">
         <mat-form-field class="form-field">
             <mat-label>Name</mat-label>
-            <input type="text" matInput>
+            <input type="text" matInput formControlName="name">
+            <mat-error *ngIf="categoryForm.get('name')?.touched && categoryForm.get('name')?.hasError('required')">
+                This field is required
+            </mat-error>
         </mat-form-field>
         <mat-form-field class="form-field">
             <mat-label>Description</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput formControlName="description"></textarea>
+            <mat-error *ngIf="categoryForm.get('description')?.touched && categoryForm.get('description')?.hasError('required')">
+                This field is required
+            </mat-error>
         </mat-form-field>
         <mat-form-field class="form-field">
             <mat-label>Status</mat-label>
-            <select matNativeControl >
+            <select matNativeControl formControlName="status">
                 <option value="active">Active</option>
                 <option value="disabled">Disabled</option>
             </select>
+            <mat-error *ngIf="categoryForm.get('description')?.touched && categoryForm.get('status')?.hasError('required')">
+                This field is required
+            </mat-error>
         </mat-form-field>
-    </form>
-</div>
-<div mat-dialog-actions class="dialog-action">
-    <button mat-raised-button (click)="closeDialog()">Cancel</button>
-    <button mat-raised-button color="primary">Save</button>
-</div>
+    </div>
+    <div mat-dialog-actions class="dialog-action">
+        <button mat-raised-button (click)="closeDialog()" type="button">Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+</form>

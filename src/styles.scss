@@ -61,6 +61,7 @@ a,a:active,a:visited,a:hover {
 }
 .form-field {
     width: 100%;
+    margin-bottom: 8px !important;
 }
 
 .mdc-dialog__title::before {
@@ -79,4 +80,7 @@ a,a:active,a:visited,a:hover {
 
 .pointer {
     cursor: pointer;
+}
+.mat-mdc-form-field-error-wrapper {
+    padding: 0 !important;
 }
